@@ -11,7 +11,7 @@ import StorageIcon from "@mui/icons-material/Storage";
 import CloudIcon from "@mui/icons-material/Cloud";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 
-import "./TechnicalSkills.css";
+import "./technicalskills.css";
 
 /* ─── skill data ────────────────────────────────────────── */
 const categories = [
