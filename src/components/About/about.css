@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════
+   ABOUT  —  dark glassmorphism  |  Sora + DM Sans
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── font tokens ─────────────────────────────────────────── */
+:root {
+  --f-head: 'Sora', 'Segoe UI', sans-serif;
+  --f-body: 'DM Sans', 'Segoe UI', sans-serif;
+  --ts-purple: #8b5cf6;
+  --ts-blue: #3b82f6;
+  --ts-text: #e2e8f0;
+  --ts-muted: #94a3b8;
+}
+
+/* ── SECTION ─────────────────────────────────────────────── */
+#about {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 7rem 1.2rem;
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.2), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.18), transparent 30%),
+    linear-gradient(135deg, #050816 0%, #0f172a 50%, #111827 100%);
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(139, 92, 246, 0.12);
+  filter: blur(120px);
+  top: -150px;
+  right: -100px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── HEADING WRAPPER ─────────────────────────────────────── */
+.about-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── EYEBROW ─────────────────────────────────────────────── */
+.about-eyebrow {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--f-body) !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  color: var(--ts-purple) !important;
+  background: rgba(139, 92, 246, 0.09) !important;
+  border: 1px solid rgba(139, 92, 246, 0.24) !important;
+  border-radius: 100px !important;
+  padding: 0.3rem 1rem !important;
+  margin: 0 !important;
+}
+
+.about-eyebrow__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ts-purple);
+  flex-shrink: 0;
+  animation: tsPulse 2s ease-in-out infinite;
+}
+
+@keyframes tsPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+/* ── MAIN TITLE ──────────────────────────────────────────── */
+.about-title {
+  font-family: var(--f-head) !important;
+  font-size: clamp(2rem, 5vw, 3.4rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.1 !important;
+  text-transform: none !important;
+  color: var(--ts-text) !important;
+  margin: 0 !important;
+  position: relative;
+  text-align: center;
+}
+
+.about-title::after {
+  display: none;
+}
+
+.about-title--grad {
+  background: linear-gradient(135deg, var(--ts-purple) 0%, var(--ts-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── SUBTITLE ────────────────────────────────────────────── */
+.about-subtitle {
+  font-family: var(--f-body) !important;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.8 !important;
+  color: var(--ts-muted) !important;
+  max-width: 560px;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+/* ── CONTENT WRAPPER ─────────────────────────────────────── */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── IMAGE ───────────────────────────────────────────────── */
+.about-image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+      rgba(139, 92, 246, 0.35) 0%,
+      rgba(59, 130, 246, 0.2) 60%,
+      transparent 100%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.about-image {
+  position: relative;
+  z-index: 1;
+  max-width: 340px;
+  width: 100%;
+  border-radius: 24px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(139, 92, 246, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.55),
+    0 0 60px rgba(139, 92, 246, 0.25);
+}
+
+/* ── INFO / TEXT ─────────────────────────────────────────── */
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-text {
+  font-family: var(--f-body) !important;
+  color: #cbd5e1 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.9 !important;
+  margin-bottom: 1.6rem !important;
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.about-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  box-shadow: 0 0 8px #8b5cf6;
+}
+
+/* ── CTA BUTTON ──────────────────────────────────────────── */
+.about-cta {
+  margin-top: 1.5rem;
+}
+
+.resume-btn {
+  font-family: var(--f-body) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #a78bfa !important;
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  border-radius: 10px !important;
+  padding: 0.75rem 2rem !important;
+  transition: all 0.35s ease !important;
+  background: rgba(139, 92, 246, 0.08) !important;
+}
+
+.resume-btn:hover {
+  color: #ffffff !important;
+  border-color: #8b5cf6 !important;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4) !important;
+  transform: translateY(-3px);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .about-text {
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  .about-text::before {
+    display: none;
+  }
+
+  .about-cta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #about {
+    padding: 5rem 1rem;
+  }
+
+  .about-title {
+    font-size: clamp(1.8rem, 8vw, 2.6rem) !important;
+  }
+
+  .about-image {
+    max-width: 260px;
+  }
+
+  .about-text {
+    font-size: 0.95rem !important;
+  }
+}

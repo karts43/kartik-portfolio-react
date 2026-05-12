@@ -1,0 +1,120 @@
+/* ═══════════════════════════════════════════════════════════
+   FOOTER  —  dark  |  Sora + DM Sans
+   ═══════════════════════════════════════════════════════════ */
+
+.footer {
+    background: linear-gradient(135deg, #050816 0%, #0a0f1e 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+/* ── BRAND ───────────────────────────────────────────────── */
+.footer-brand {
+    font-family: var(--f-head) !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── TAGLINE ─────────────────────────────────────────────── */
+.footer-tagline {
+    font-family: var(--f-body) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    margin-top: -0.5rem !important;
+}
+
+/* ── ICONS ROW ───────────────────────────────────────────── */
+.footer-icons-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+/* ── ICON BUTTON ─────────────────────────────────────────── */
+.footer-icon {
+    color: #64748b !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    width: 50px !important;
+    height: 50px !important;
+    flex-shrink: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.footer-icon:hover {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+    border-color: transparent !important;
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+/* ── DIVIDER ─────────────────────────────────────────────── */
+.footer-divider {
+    width: 200px;
+    height: 1px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(139, 92, 246, 0.5),
+            transparent);
+}
+
+/* ── COPYRIGHT ───────────────────────────────────────────── */
+.footer-text {
+    font-family: var(--f-body) !important;
+    font-size: 0.88rem !important;
+    font-weight: 400 !important;
+    color: #64748b !important;
+    letter-spacing: 0.03em !important;
+}
+
+/* ── SUBTEXT ─────────────────────────────────────────────── */
+.footer-subtext {
+    font-family: var(--f-body) !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    color: #475569 !important;
+    transition: color 0.3s ease;
+}
+
+.footer-subtext:hover {
+    color: #8b5cf6 !important;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .footer {
+        padding: 3rem 1rem;
+    }
+
+    .footer-icon {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .footer-brand {
+        font-size: 1.25rem !important;
+    }
+
+    .footer-text {
+        font-size: 0.82rem !important;
+    }
+
+    .footer-subtext {
+        font-size: 0.75rem !important;
+    }
+}

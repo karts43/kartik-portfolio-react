@@ -1,0 +1,243 @@
+/* ═══════════════════════════════════════════════════════════
+   CONTACT  —  dark glassmorphism  |  Sora + DM Sans
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SECTION ─────────────────────────────────────────────── */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    padding: 7rem 1.2rem;
+    background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.2), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.18), transparent 30%),
+        linear-gradient(135deg, #050816 0%, #0f172a 50%, #111827 100%);
+}
+
+.contact-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 92, 246, 0.13);
+    filter: blur(120px);
+    top: -150px;
+    right: -100px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── CONTAINER ───────────────────────────────────────────── */
+.contact-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* ── HEADING WRAPPER ─────────────────────────────────────── */
+.contact-heading-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* ── EYEBROW ─────────────────────────────────────────────── */
+.contact-eyebrow {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--f-body) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    color: var(--ts-purple) !important;
+    background: rgba(139, 92, 246, 0.09) !important;
+    border: 1px solid rgba(139, 92, 246, 0.24) !important;
+    border-radius: 100px !important;
+    padding: 0.3rem 1rem !important;
+    margin: 0 !important;
+}
+
+.contact-eyebrow__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ts-purple);
+    flex-shrink: 0;
+    animation: tsPulse 2s ease-in-out infinite;
+}
+
+@keyframes tsPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}
+
+/* ── MAIN TITLE ──────────────────────────────────────────── */
+.contact-title {
+    font-family: var(--f-head) !important;
+    font-size: clamp(2rem, 5vw, 3.4rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.1 !important;
+    color: var(--ts-text) !important;
+    margin: 0 !important;
+    text-transform: none !important;
+}
+
+.contact-title--grad {
+    background: linear-gradient(135deg, var(--ts-purple) 0%, var(--ts-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── SUBTITLE ────────────────────────────────────────────── */
+.contact-subtitle {
+    font-family: var(--f-body) !important;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.8 !important;
+    color: var(--ts-muted) !important;
+    max-width: 560px;
+    margin: 0 auto !important;
+}
+
+/* ── GLASS CARD ──────────────────────────────────────────── */
+.contact-card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-card:hover {
+    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 50px rgba(139, 92, 246, 0.1);
+}
+
+/* ── EMAIL ICON ──────────────────────────────────────────── */
+.contact-icon-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-card:hover .contact-icon-wrap {
+    transform: scale(1.1) rotate(-8deg);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.55);
+}
+
+.contact-icon {
+    font-size: 2.4rem !important;
+    color: #ffffff;
+}
+
+/* ── CARD HEADING ────────────────────────────────────────── */
+.contact-card-heading {
+    font-family: var(--f-head) !important;
+    font-size: clamp(1.8rem, 4vw, 2.6rem) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+}
+
+/* ── SUBTEXT ─────────────────────────────────────────────── */
+.contact-subtext {
+    font-family: var(--f-body) !important;
+    color: #94a3b8 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.9 !important;
+    max-width: 520px;
+    margin: 0 auto !important;
+}
+
+/* ── CTA BUTTON ──────────────────────────────────────────── */
+.contact-btn {
+    font-family: var(--f-body) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 0.85rem 2.8rem !important;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35) !important;
+    transition: all 0.35s ease !important;
+    margin-top: 0.5rem !important;
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 14px 40px rgba(139, 92, 246, 0.5) !important;
+    background: linear-gradient(135deg, #7c3aed, #2563eb) !important;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 3rem 2rem;
+    }
+
+    .contact-icon-wrap {
+        width: 66px;
+        height: 66px;
+    }
+
+    .contact-icon {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 5rem 1rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .contact-title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem) !important;
+    }
+
+    .contact-subtext {
+        font-size: 0.95rem !important;
+    }
+
+    .contact-btn {
+        font-size: 0.9rem !important;
+        padding: 0.75rem 2rem !important;
+    }
+}

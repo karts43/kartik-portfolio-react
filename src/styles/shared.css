@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════════
+   shared.css  —  global design tokens used by ALL sections
+   Import this ONCE in index.css / App.css (not per-component)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SECTION BACKGROUND (reusable mixin via class) ──────── */
+.section-dark {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 7rem 1.2rem;
+    background:
+        radial-gradient(circle at top left,
+            rgba(124, 58, 237, 0.2),
+            transparent 30%),
+        radial-gradient(circle at bottom right,
+            rgba(59, 130, 246, 0.18),
+            transparent 30%),
+        linear-gradient(135deg,
+            #050816 0%,
+            #0f172a 50%,
+            #111827 100%);
+}
+
+.section-dark::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 92, 246, 0.12);
+    filter: blur(120px);
+    top: -150px;
+    right: -100px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── SECTION TITLE ───────────────────────────────────────── */
+.section-title-common {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 3.2rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    color: #ffffff !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 5rem !important;
+    position: relative;
+    z-index: 2;
+}
+
+/* Gradient underline */
+.section-title-common::after {
+    content: "";
+    display: block;
+    margin: 1.2rem auto 0;
+    width: 72px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+}
+
+/* ── BULLET DOT (description items) ─────────────────────── */
+/* Usage: add class="bullet-item" to any Typography/p        */
+.bullet-item {
+    position: relative;
+    padding-left: 1.8rem;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.bullet-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    box-shadow: 0 0 8px #8b5cf6;
+}
+
+/* ── GLASS CARD ──────────────────────────────────────────── */
+.glass-card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(139, 92, 246, 0.12);
+}
+
+/* ── TECH CHIP ───────────────────────────────────────────── */
+.tech-chip-common {
+    background: rgba(139, 92, 246, 0.12) !important;
+    border: 1px solid rgba(139, 92, 246, 0.25) !important;
+    color: #dbeafe !important;
+    font-weight: 600 !important;
+    font-family: "Montserrat", sans-serif !important;
+    padding: 0.3rem 0.4rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.tech-chip-common:hover {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .section-dark {
+        padding: 5rem 1rem;
+    }
+
+    .section-title-common {
+        font-size: 2.7rem !important;
+    }
+}

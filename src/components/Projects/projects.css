@@ -1,0 +1,251 @@
+/* ═══════════════════════════════════════════════════════════
+   projects.css  —  cleaned & deduplicated
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SECTION ─────────────────────────────────────────────── */
+.projects-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 7rem 1.2rem;
+    background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.2), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.18), transparent 30%),
+        linear-gradient(135deg, #050816 0%, #0f172a 50%, #111827 100%);
+}
+
+.projects-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 92, 246, 0.12);
+    filter: blur(120px);
+    top: -150px;
+    right: -100px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── HEADING WRAPPER ─────────────────────────────────────── */
+.projects-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* ── EYEBROW ─────────────────────────────────────────────── */
+.projects-eyebrow {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--f-body) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    color: var(--ts-purple) !important;
+    background: rgba(139, 92, 246, 0.09) !important;
+    border: 1px solid rgba(139, 92, 246, 0.24) !important;
+    border-radius: 100px !important;
+    padding: 0.3rem 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+.projects-eyebrow__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ts-purple);
+    flex-shrink: 0;
+    animation: tsPulse 2s ease-in-out infinite;
+}
+
+@keyframes tsPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}
+
+/* ── MAIN TITLE ──────────────────────────────────────────── */
+.projects-title {
+    font-family: var(--f-head) !important;
+    font-size: clamp(2rem, 5vw, 3.4rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.1 !important;
+    color: var(--ts-text) !important;
+    margin: 0 !important;
+    text-transform: none !important;
+    position: relative;
+    z-index: 2;
+}
+
+.projects-title--grad {
+    background: linear-gradient(135deg, var(--ts-purple) 0%, var(--ts-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── SUBTITLE ────────────────────────────────────────────── */
+.projects-subtitle {
+    font-family: var(--f-body) !important;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.8 !important;
+    color: var(--ts-muted) !important;
+    max-width: 560px;
+    margin: 0 auto !important;
+}
+
+/* ── CARD ────────────────────────────────────────────────── */
+.project-card {
+    position: relative;
+    border-radius: 30px !important;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    transition: all 0.4s ease !important;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(139, 92, 246, 0.12);
+}
+
+/* ── CARD CONTENT ────────────────────────────────────────── */
+.project-content {
+    padding: 3rem !important;
+    position: relative;
+    z-index: 2;
+}
+
+.project-number {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 5rem !important;
+    font-weight: 900 !important;
+    opacity: 0.06;
+    color: #ffffff;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.project-card-title {
+    font-size: clamp(1.5rem, 3vw, 2.4rem) !important;
+    font-weight: 700 !important;
+    color: #ffffff;
+    line-height: 1.4 !important;
+    margin-bottom: 2rem !important;
+    max-width: 90%;
+}
+
+/* ── DESCRIPTIONS ────────────────────────────────────────── */
+.project-description-box {
+    margin-bottom: 2rem;
+}
+
+.project-description {
+    color: #cbd5e1;
+    font-size: 1.02rem !important;
+    line-height: 1.9 !important;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.project-description::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    box-shadow: 0 0 10px #8b5cf6;
+}
+
+/* ── DIVIDER ─────────────────────────────────────────────── */
+.project-divider {
+    margin: 2rem 0 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── TECH STACK ──────────────────────────────────────────── */
+.tech-title {
+    color: #8b5cf6;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.tech-chip {
+    background: rgba(139, 92, 246, 0.12) !important;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    color: #dbeafe !important;
+    font-weight: 600 !important;
+    padding: 0.3rem 0.4rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.tech-chip:hover {
+    transform: translateY(-4px) scale(1.05);
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.35);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .projects-section {
+        padding: 5rem 1rem;
+    }
+
+    .project-content {
+        padding: 2rem !important;
+    }
+
+    .project-number {
+        font-size: 3rem !important;
+        top: 20px;
+        right: 20px;
+    }
+
+    .project-card-title {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem) !important;
+    }
+
+    .project-content {
+        padding: 1.5rem !important;
+    }
+
+    .project-description {
+        font-size: 0.95rem !important;
+    }
+}

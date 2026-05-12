@@ -1,0 +1,508 @@
+/* ═══════════════════════════════════════════════════════════
+   INTERNSHIP  —  dark glassmorphism  |  Montserrat
+   Consistent with Projects + Qualification sections
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SECTION ─────────────────────────────────────────────── */
+#internship {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 7rem 1.2rem;
+    background:
+        radial-gradient(circle at top left,
+            rgba(124, 58, 237, 0.2),
+            transparent 30%),
+        radial-gradient(circle at bottom right,
+            rgba(59, 130, 246, 0.18),
+            transparent 30%),
+        linear-gradient(135deg,
+            #050816 0%,
+            #0f172a 50%,
+            #111827 100%);
+}
+
+#internship::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(139, 92, 246, 0.12);
+    filter: blur(120px);
+    top: -150px;
+    right: -100px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── SECTION TITLE (shared — same as about.css) ───────────── */
+/* NOTE: if you use a global shared.css, move this there       */
+.section-title-common {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 3.2rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    color: #ffffff !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 5rem !important;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title-common::after {
+    content: "";
+    display: block;
+    margin: 1.2rem auto 0;
+    width: 72px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+}
+
+/* ── CARD ────────────────────────────────────────────────── */
+.internship-card {
+    display: flex;
+    align-items: stretch;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.internship-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(139, 92, 246, 0.12);
+}
+
+/* ── ACCENT BAR ──────────────────────────────────────────── */
+.internship-bar {
+    width: 6px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.internship-bar--purple {
+    background: linear-gradient(to bottom, #8b5cf6, #3b82f6);
+}
+
+.internship-bar--blue {
+    background: linear-gradient(to bottom, #0ea5e9, #0284c7);
+}
+
+/* ── BODY ────────────────────────────────────────────────── */
+.internship-body {
+    flex: 1;
+    padding: 2.8rem 3rem;
+    position: relative;
+}
+
+/* ── HEADER ROW ──────────────────────────────────────────── */
+.internship-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+    margin-bottom: 1.8rem;
+}
+
+/* ── ICON ────────────────────────────────────────────────── */
+.internship-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.internship-card:hover .internship-icon {
+    transform: scale(1.1) rotate(-4deg);
+}
+
+.internship-icon--purple {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+
+.internship-card--purple:hover .internship-icon--purple {
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
+}
+
+.internship-icon--blue {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+}
+
+.internship-card--blue:hover .internship-icon--blue {
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.5);
+}
+
+/* ── TITLE BLOCK ─────────────────────────────────────────── */
+.internship-title-block {
+    flex: 1;
+    min-width: 0;
+}
+
+.internship-role {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.4rem !important;
+}
+
+.internship-company {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: #94a3b8 !important;
+}
+
+/* ── NUMBER WATERMARK ────────────────────────────────────── */
+.internship-number {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 5rem !important;
+    font-weight: 900 !important;
+    opacity: 0.05;
+    color: #ffffff;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* ── META ROW ────────────────────────────────────────────── */
+.internship-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.internship-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 5px 14px;
+}
+
+/* ── DIVIDER ─────────────────────────────────────────────── */
+.internship-divider {
+    margin: 1.8rem 0 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── DESCRIPTIONS ────────────────────────────────────────── */
+.internship-desc {
+    font-family: "Montserrat", sans-serif !important;
+    color: #cbd5e1 !important;
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.internship-desc::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    box-shadow: 0 0 8px #8b5cf6;
+}
+
+/* ── TECH LABEL ──────────────────────────────────────────── */
+.tech-label {
+    color: #8b5cf6 !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 1.1rem !important;
+}
+
+/* ── CHIPS ───────────────────────────────────────────────── */
+.internship-chip {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 600 !important;
+    padding: 0.3rem 0.4rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.internship-chip--purple {
+    background: rgba(139, 92, 246, 0.12) !important;
+    border: 1px solid rgba(139, 92, 246, 0.28) !important;
+    color: #dbeafe !important;
+}
+
+.internship-chip--purple:hover {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
+}
+
+.internship-chip--blue {
+    background: rgba(14, 165, 233, 0.1) !important;
+    border: 1px solid rgba(14, 165, 233, 0.28) !important;
+    color: #bae6fd !important;
+}
+
+.internship-chip--blue:hover {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+}
+
+/* ── CARD HOVER BORDER ───────────────────────────────────── */
+.internship-card--purple:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+}
+
+.internship-card--blue:hover {
+    border-color: rgba(14, 165, 233, 0.35);
+}
+
+.internship-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.internship-eyebrow {
+    font-family: var(--f-body) !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    color: #34d399 !important;
+    margin-bottom: 1rem !important;
+}
+
+.internship-title {
+    font-family: var(--f-head) !important;
+    font-size: clamp(2.6rem, 6vw, 4.2rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.1 !important;
+    color: #e2e8f0 !important;
+    margin: 0 !important;
+    position: relative;
+}
+
+.internship-title::after {
+    content: "";
+    display: block;
+    margin: 1.4rem auto 0;
+    width: 72px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #34d399 0%, #3b82f6 100%);
+}
+
+.internship-subtitle {
+    max-width: 760px;
+    margin: 1.8rem auto 0 !important;
+    font-family: var(--f-body) !important;
+    font-size: clamp(1.05rem, 2.2vw, 1.15rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.85 !important;
+    color: #94a3b8 !important;
+}
+
+/* ── INTERNSHIP HEADING WRAPPER ──────────────────────────── */
+.internship-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* ── EYEBROW ─────────────────────────────────────────────── */
+.internship-eyebrow {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--f-body) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    color: var(--ts-purple) !important;
+    background: rgba(139, 92, 246, 0.09) !important;
+    border: 1px solid rgba(139, 92, 246, 0.24) !important;
+    border-radius: 100px !important;
+    padding: 0.3rem 1rem !important;
+    margin: 0 !important;
+}
+
+.internship-eyebrow__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ts-purple);
+    flex-shrink: 0;
+    animation: tsPulse 2s ease-in-out infinite;
+}
+
+/* ── MAIN TITLE ──────────────────────────────────────────── */
+.internship-title {
+    font-family: var(--f-head) !important;
+    font-size: clamp(2rem, 5vw, 3.4rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.1 !important;
+    color: var(--ts-text) !important;
+    margin: 0 !important;
+    position: relative;
+    text-transform: none !important;
+}
+
+/* remove old underline bar */
+.internship-title::after {
+    display: none;
+}
+
+.internship-title--grad {
+    background: linear-gradient(135deg, var(--ts-purple) 0%, var(--ts-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── SUBTITLE ────────────────────────────────────────────── */
+.internship-subtitle {
+    font-family: var(--f-body) !important;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.8 !important;
+    color: var(--ts-muted) !important;
+    max-width: 560px;
+    margin: 0 auto !important;
+}
+
+/* ── ROLE title — clamp + wrap fix ──────────────────────── */
+.internship-role {
+    font-family: var(--f-head) !important;
+    font-size: clamp(1.1rem, 2vw, 1.6rem) !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.4rem !important;
+    word-break: break-word;
+    white-space: normal;
+    max-width: calc(100% - 80px);
+    /* leave room for watermark number */
+}
+
+/* ── HEADER ROW — allow wrapping on long titles ──────────── */
+.internship-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
+}
+
+/* ── NUMBER watermark — don't push content ───────────────── */
+.internship-number {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: clamp(3rem, 6vw, 5rem) !important;
+    font-weight: 900 !important;
+    opacity: 0.05;
+    color: #ffffff;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── BODY — contain overflow ─────────────────────────────── */
+.internship-body {
+    flex: 1;
+    padding: 2.8rem 3rem;
+    position: relative;
+    min-width: 0;
+    /* ← critical: prevents flex child overflow */
+    overflow: hidden;
+}
+
+/* ── TITLE BLOCK — prevent overflow ──────────────────────── */
+.internship-title-block {
+    flex: 1;
+    min-width: 0;
+    /* ← critical */
+}
+
+/* ── CHIPS row — wrap properly ───────────────────────────── */
+.internship-desc-list {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+    #internship {
+        padding: 5rem 1rem;
+    }
+
+    .internship-body {
+        padding: 2rem 2rem;
+    }
+
+    .internship-number {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title-common {
+        font-size: 2.7rem !important;
+    }
+
+    .internship-body {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .internship-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .internship-desc {
+        font-size: 0.92rem !important;
+    }
+
+    .internship-meta {
+        gap: 0.8rem;
+    }
+}
